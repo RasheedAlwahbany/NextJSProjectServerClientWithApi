@@ -1,3 +1,4 @@
+// ENG.RASHEED ALWAHBANY @2024
 // pages/_app.js
 import { ApolloProvider } from '@apollo/client';
 import client from '../../lib/apolloClient';
@@ -12,3 +13,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+// ENG.RASHEED ALWAHBANY @2024
