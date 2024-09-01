@@ -1,4 +1,4 @@
-# NextJS Project Server Client With Api
+## NextJS Project Server Client With Api
 This is NextJS Project Server Client With API
 
 
@@ -18,7 +18,53 @@ pnpm dev
 # or
 bun dev
 ```
+## Setup Prisma
+### Install the package
+```
+npm install @prisma/client
+npm install prisma
+```
+### Configure Prisma
+```
+DATABASE_URL="postgresql://username:password@localhost:5432/mydatabase"
+```
+### schema.prisma
+```
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+}
+```
+### Migrate the Database
+```
+npx prisma migrate dev --name init
+```
+
+## Set Up Apollo Client
+### Install  the package
+```
+pnpm install @apollo/client graphql
+pnpm install graphql apollo-server-micro
+```
+The configuration have to be like this:
+- Create Apollo Client `lib/apolloClient.js`
+- Create GraphQL API Routes `pages/api/graphql.js`
+- Query Data in Your Next.js Pages `pages/_app.js`
+- Use Apollo Client in Your Components `pages/index.js`
+
+
+## Test the project
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
