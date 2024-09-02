@@ -1,3 +1,4 @@
+// ENG.RASHEED ALWAHBANY @2024
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
@@ -18,3 +19,4 @@ model Users {
   name  String
   email String @unique
 }
+// ENG.RASHEED ALWAHBANY @2024

@@ -1,3 +1,4 @@
+// ENG.RASHEED ALWAHBANY @2024
 // /pages/index.js
 import { useQuery, useMutation, gql } from '@apollo/client';
 import Link from 'next/link';
@@ -65,3 +66,4 @@ export default function Home() {
     </div>
   );
 }
+// ENG.RASHEED ALWAHBANY @2024
